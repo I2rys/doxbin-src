@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^home/?$ index.php
+RewriteRule ^add/?$ index.php?page=add
+RewriteRule ^tos/?$ index.php?page=tos
+RewriteRule ^upload/(.+)/raw$ index.php?page=raw&id=$1
+RewriteRule ^upload/(.+)$ index.php?page=upload&id=$1
+
+<Files ~ "config$">
+  Order allow,deny
+  Deny from all
+</Files>
